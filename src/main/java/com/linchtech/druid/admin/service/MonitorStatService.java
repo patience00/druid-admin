@@ -22,6 +22,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -37,6 +38,7 @@ import java.util.stream.Collectors;
  * @date 2020-09-16 11:12
  **/
 @Slf4j
+@Component
 public class MonitorStatService implements DruidStatServiceMBean {
 
     public final static int RESULT_CODE_SUCCESS = 1;
