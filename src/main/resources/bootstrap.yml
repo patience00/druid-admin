@@ -15,19 +15,19 @@ spring:
         hostname: ${spring.cloud.client.ip-address}
         instance-id: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
         instance-zone: zone1
-    nacos:
-      discovery:
-        enabled: false
-        server-addr: localhost:8848
-eureka:
-  instance:
-    preferIpAddress: true
-    ipAddress: localhost
-    instance-id: ${eureka.instance.ipAddress}:${server.port}:${spring.application.name}
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-    enabled: false
+#    nacos:
+#      discovery:
+#        enabled: false
+#        server-addr: localhost:8848
+#eureka:
+#  instance:
+#    preferIpAddress: true
+#    ipAddress: localhost
+#    instance-id: ${eureka.instance.ipAddress}:${server.port}:${spring.application.name}
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
+#    enabled: false
 
 monitor:
   applications: #需要监控的服务名spring.application.name
